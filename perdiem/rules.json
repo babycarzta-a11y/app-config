@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "last_verified": "2026-09-18",
+  "deductible_fraction": 0.80,
+  "deductible_source": "IRC 274(n)(3); Rev. Proc. 2019-48 sec. 2.02; IRS Pub 463 ch. 2 'Individuals subject to hours of service limits'",
+  "deductible_source_url": "https://www.law.cornell.edu/uscode/text/26/274",
+  "partial_day_fraction": 0.75,
+  "partial_day_source": "Rev. Proc. 2019-48 sec. 6.04(1) (mandatory for self-employed under sec. 4.03); 41 CFR 301-11.101",
+  "partial_day_source_url": "https://www.irs.gov/pub/irs-drop/rp-19-48.pdf",
+  "currency": "USD",
+  "rates": [
+    {
+      "effective_from": "2025-10-01",
+      "effective_to": "2026-09-30",
+      "conus": 80,
+      "oconus": 86,
+      "source": "IRS Notice 2025-54",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-25-54.pdf",
+      "last_verified": "2026-09-18"
+    },
+    {
+      "effective_from": "2024-10-01",
+      "effective_to": "2025-09-30",
+      "conus": 80,
+      "oconus": 86,
+      "source": "IRS Notice 2024-68",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-24-68.pdf",
+      "last_verified": "2026-09-18"
+    },
+    {
+      "effective_from": "2023-10-01",
+      "effective_to": "2024-09-30",
+      "conus": 69,
+      "oconus": 74,
+      "source": "IRS Notice 2023-68",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-23-68.pdf",
+      "last_verified": "2026-09-18"
+    },
+    {
+      "effective_from": "2022-10-01",
+      "effective_to": "2023-09-30",
+      "conus": 69,
+      "oconus": 74,
+      "source": "IRS Notice 2022-44",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-22-44.pdf",
+      "last_verified": "2026-09-18"
+    },
+    {
+      "effective_from": "2021-10-01",
+      "effective_to": "2022-09-30",
+      "conus": 69,
+      "oconus": 74,
+      "source": "IRS Notice 2021-52",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-21-52.pdf",
+      "last_verified": "2026-09-18"
+    },
+    {
+      "effective_from": "2020-10-01",
+      "effective_to": "2021-09-30",
+      "conus": 66,
+      "oconus": 71,
+      "source": "IRS Notice 2020-71",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-20-71.pdf",
+      "last_verified": "2026-09-18"
+    },
+    {
+      "effective_from": "2019-10-01",
+      "effective_to": "2020-09-30",
+      "conus": 66,
+      "oconus": 71,
+      "source": "IRS Notice 2019-55",
+      "source_url": "https://www.irs.gov/pub/irs-drop/n-19-55.pdf",
+      "last_verified": "2026-09-18"
+    }
+  ],
+  "notes": [
+    "FY2027 row (effective 2026-10-01) intentionally omitted: no IRS notice published as of 2026-09-18 (irs.gov/pub/irs-drop checked through Notice 2026-57). Days on/after 2026-10-01 must be shown as provisional until a row is added.",
+    "Rows before 2019-10-01 omitted: not verified."
+  ]
+}
