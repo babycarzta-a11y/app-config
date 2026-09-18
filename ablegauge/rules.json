@@ -1,5 +1,5 @@
 {
-  "_comment": "AbleGauge bundled rules-engine config. Field names match docs/able-guard/product.md §3 exactly (rule_name, value, effective_from, effective_to, jurisdiction, program, official_source, source_confidence, last_verified, implementation_note). Shape mirrors projects/able-guard-web/data/rules.json (current_year + years block) so both platforms can eventually share one hosted config - see decisions.md. Every value traces to docs/able-guard/rules-factcheck.md; never cite IRS.gov (confirmed stale on 2026 figures).",
+  "_comment": "AbleGauge bundled rules-engine config. Field names match docs/able-guard/product.md §3 exactly (rule_name, value, effective_from, effective_to, jurisdiction, program, official_source, source_confidence, last_verified, implementation_note). Shape mirrors projects/able-guard-web/data/rules.json (current_year + years block) so both platforms can eventually share one hosted config - see decisions.md. Every value traces to docs/able-guard/rules-factcheck.md; never cite IRS.gov (confirmed stale on 2026 figures). programs[].official_url is OPTIONAL and must be a verified official program site (same URL as that program's program_max_balance official_source); the app renders a link only when present and never guesses domains - market-researcher supplies verified URLs for any new state.",
   "current_year": 2026,
   "years": {
     "2026": {
@@ -130,10 +130,10 @@
         }
       ],
       "programs": [
-        { "state_code": "CA", "state_name": "California", "program_name": "CalABLE" },
-        { "state_code": "VA", "state_name": "Virginia", "program_name": "ABLEnow" },
-        { "state_code": "FL", "state_name": "Florida", "program_name": "ABLE United" },
-        { "state_code": "OH", "state_name": "Ohio", "program_name": "STABLE" }
+        { "state_code": "CA", "state_name": "California", "program_name": "CalABLE", "official_url": "https://www.calable.ca.gov" },
+        { "state_code": "VA", "state_name": "Virginia", "program_name": "ABLEnow", "official_url": "https://www.ablenow.com" },
+        { "state_code": "FL", "state_name": "Florida", "program_name": "ABLE United", "official_url": "https://www.ableunited.com" },
+        { "state_code": "OH", "state_name": "Ohio", "program_name": "STABLE", "official_url": "https://www.stableaccount.com" }
       ]
     }
   }
