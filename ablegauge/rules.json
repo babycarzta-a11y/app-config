@@ -1,0 +1,140 @@
+{
+  "_comment": "AbleGauge bundled rules-engine config. Field names match docs/able-guard/product.md §3 exactly (rule_name, value, effective_from, effective_to, jurisdiction, program, official_source, source_confidence, last_verified, implementation_note). Shape mirrors projects/able-guard-web/data/rules.json (current_year + years block) so both platforms can eventually share one hosted config - see decisions.md. Every value traces to docs/able-guard/rules-factcheck.md; never cite IRS.gov (confirmed stale on 2026 figures).",
+  "current_year": 2026,
+  "years": {
+    "2026": {
+      "status_thresholds": {
+        "watch": 0.8,
+        "near_limit": 0.95
+      },
+      "rules": [
+        {
+          "rule_name": "annual_contribution_limit",
+          "value": 20000,
+          "effective_from": "2026-01-01",
+          "effective_to": null,
+          "jurisdiction": "national",
+          "program": null,
+          "official_source": "https://www.ablenrc.org/able-account-contribution-limits-2025/",
+          "source_confidence": "FACT",
+          "last_verified": "2026-09-15",
+          "implementation_note": "Page content reflects current-year 2026 figures despite the URL slug. IRS.gov is stale (still shows 2025's $19,000) - do not cite IRS.gov as source."
+        },
+        {
+          "rule_name": "able_to_work_cap",
+          "value": 15650,
+          "effective_from": "2026-01-01",
+          "effective_to": null,
+          "jurisdiction": "continental",
+          "program": null,
+          "official_source": "https://www.ablenrc.org/able-account-contribution-limits-2025/",
+          "source_confidence": "FACT",
+          "last_verified": "2026-09-15",
+          "implementation_note": "Lesser-of test: additional room = min(compensation, this cap). Figure tracks the 1-person federal poverty line per ABLE NRC's stated mechanism; the underlying poverty-line arithmetic itself was not independently re-derived - do not present the derivation as re-verified, only the resulting figure and the lesser-of rule."
+        },
+        {
+          "rule_name": "able_to_work_cap",
+          "value": 19550,
+          "effective_from": "2026-01-01",
+          "effective_to": null,
+          "jurisdiction": "alaska",
+          "program": null,
+          "official_source": "https://www.ablenrc.org/able-account-contribution-limits-2025/",
+          "source_confidence": "FACT",
+          "last_verified": "2026-09-15",
+          "implementation_note": null
+        },
+        {
+          "rule_name": "able_to_work_cap",
+          "value": 17990,
+          "effective_from": "2026-01-01",
+          "effective_to": null,
+          "jurisdiction": "hawaii",
+          "program": null,
+          "official_source": "https://www.ablenrc.org/able-account-contribution-limits-2025/",
+          "source_confidence": "FACT",
+          "last_verified": "2026-09-15",
+          "implementation_note": null
+        },
+        {
+          "rule_name": "ssi_able_exclusion",
+          "value": 100000,
+          "effective_from": null,
+          "effective_to": null,
+          "jurisdiction": "national",
+          "program": null,
+          "official_source": "https://secure.ssa.gov/poms.nsf/lnx/0501130740",
+          "source_confidence": "FACT",
+          "last_verified": "2026-09-15",
+          "implementation_note": "POMS SI 01130.740: first $100,000 in an ABLE account is excluded from SSI countable resources. Only the amount EXCEEDING $100,000 counts as a resource. Never compare the raw ABLE balance to this figure as a cliff - see ssi_resource_limit for the actual comparison."
+        },
+        {
+          "rule_name": "ssi_resource_limit",
+          "value": 2000,
+          "effective_from": null,
+          "effective_to": null,
+          "jurisdiction": "national",
+          "program": null,
+          "official_source": "https://secure.ssa.gov/poms.nsf/lnx/0501130740",
+          "source_confidence": "FACT",
+          "last_verified": "2026-09-15",
+          "implementation_note": "Standard individual SSI resource limit. Only the individual limit is supported at MVP - couple-filing has a different limit, not independently re-verified; app copy must tell couple-filing users to check current SSA guidance."
+        },
+        {
+          "rule_name": "program_max_balance",
+          "value": 529000,
+          "effective_from": null,
+          "effective_to": null,
+          "jurisdiction": "state:CA",
+          "program": "CalABLE",
+          "official_source": "https://www.calable.ca.gov",
+          "source_confidence": "FACT",
+          "last_verified": "2026-09-15",
+          "implementation_note": "Secondary-confirmed - direct fetch of calable.ca.gov was blocked (403) during fact-check; figure corroborated via search of the program's own published content."
+        },
+        {
+          "rule_name": "program_max_balance",
+          "value": 675000,
+          "effective_from": null,
+          "effective_to": null,
+          "jurisdiction": "state:VA",
+          "program": "ABLEnow",
+          "official_source": "https://www.ablenow.com",
+          "source_confidence": "FACT",
+          "last_verified": "2026-09-15",
+          "implementation_note": "Secondary-confirmed - direct PDF fetch of ABLEnow's Program Description returned unreadable encoded text; figure corroborated via search referencing that same official document."
+        },
+        {
+          "rule_name": "program_max_balance",
+          "value": 500000,
+          "effective_from": null,
+          "effective_to": null,
+          "jurisdiction": "state:FL",
+          "program": "ABLE United",
+          "official_source": "https://www.ableunited.com",
+          "source_confidence": "UNVERIFIED",
+          "last_verified": "2026-09-15",
+          "implementation_note": "Could not be independently confirmed from ableunited.com directly (homepage fetch succeeded but did not state a figure); sourced from a secondary aggregator. UI must show the 'Unconfirmed' qualifier and link out to ableunited.com - never present as a plain fact."
+        },
+        {
+          "rule_name": "program_max_balance",
+          "value": 517000,
+          "effective_from": null,
+          "effective_to": null,
+          "jurisdiction": "state:OH",
+          "program": "STABLE",
+          "official_source": "https://www.stableaccount.com",
+          "source_confidence": "UNVERIFIED",
+          "last_verified": "2026-09-15",
+          "implementation_note": "Direct fetch of stableaccount.com was blocked (403); figure came from a search snippet of uncertain vintage. Do NOT show any STABLE contribution-limit figures anywhere - the accompanying $16,000/$12,880 figures found alongside this number are stale/pre-2026 and conflict with the confirmed 2026 national figures. This row is ONLY the plan maximum."
+        }
+      ],
+      "programs": [
+        { "state_code": "CA", "state_name": "California", "program_name": "CalABLE" },
+        { "state_code": "VA", "state_name": "Virginia", "program_name": "ABLEnow" },
+        { "state_code": "FL", "state_name": "Florida", "program_name": "ABLE United" },
+        { "state_code": "OH", "state_name": "Ohio", "program_name": "STABLE" }
+      ]
+    }
+  }
+}

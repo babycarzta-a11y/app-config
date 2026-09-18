@@ -1,0 +1,13 @@
+{
+  "status": "Active",
+  "maximum_grace_days": 60,
+  "rule_state": "CURRENT",
+  "proposed_change": {
+    "summary": "DHS has proposed eliminating the discretionary 60-day grace period entirely for E-1, E-2, E-3, H-1B, H-1B1, L-1, O-1, and TN classifications and their dependents (8 CFR 214.1(l)(2)). Comment period closes Nov 10, 2026.",
+    "source_url": "https://www.federalregister.gov/documents/2026/09/11/2026-18631/eliminating-the-discretionary-60-day-grace-period",
+    "docket": "USCIS-2026-0364",
+    "comment_period_closes": "2026-11-10"
+  },
+  "last_verified": "2026-09-15",
+  "source_url": "https://www.uscis.gov/archive/options-for-nonimmigrant-workers-following-termination-of-employment-0"
+}

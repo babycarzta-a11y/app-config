@@ -1,0 +1,30 @@
+{
+  "weekly_limit_gbp": {
+    "value": 204.00,
+    "effective_from": "2026-04-06",
+    "effective_to": null,
+    "official_source": "https://www.gov.uk/carers-allowance",
+    "last_verified": "2026-09-15"
+  },
+  "weekly_rate_gbp": {
+    "value": 86.45,
+    "effective_from": "2026-04-06",
+    "effective_to": null,
+    "official_source": "https://www.gov.uk/carers-allowance",
+    "last_verified": "2026-09-15"
+  },
+  "care_cost_max_fraction": {
+    "value": 0.5,
+    "effective_from": null,
+    "effective_to": null,
+    "official_source": "https://www.gov.uk/carers-allowance/eligibility",
+    "last_verified": "2026-09-15"
+  },
+  "pension_max_fraction": {
+    "value": 0.5,
+    "effective_from": null,
+    "effective_to": null,
+    "official_source": "https://www.gov.uk/carers-allowance/eligibility",
+    "last_verified": "2026-09-15"
+  }
+}
