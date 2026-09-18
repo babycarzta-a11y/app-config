@@ -1,0 +1,700 @@
+{
+  "schema_version": 1,
+  "generated": "2026-09-18",
+  "notes": [
+    "Contains no legal limits: every rating is user-entered from a plate. Packs carry terminology, guidance %, presets, glossary, sources and copy only.",
+    "Omitted as unverified on 2026-09-18: annexe, jerry can (empty), e-bike, petrol density, AU occupant default, Calor 3.9 kg / 4.5 kg butane, Thule per-size awning weights. See research/towcheck-data-pack-2026-09-18.md.",
+    "AU ball-mass band: WA DoT 8-10% of ATM chosen; NSW Government 5-10% of trailer-plus-load is an equally valid alternative (glossary)."
+  ],
+  "packs": [
+    {
+      "market": "AU",
+      "pack_version": 1,
+      "effective_from": "2026-09-18",
+      "last_verified": "2026-09-18",
+      "terms": {
+        "kerb": {
+          "label": "Kerb mass",
+          "long_name": "Kerb (unladen) mass of tow vehicle",
+          "plate_hint": "Vehicle handbook. WA DoT: running order, unoccupied, all fluids incl. full fuel, standard equipment. Manufacturer definitions vary - check whether fuel/driver are included.",
+          "source": "https://www.transport.wa.gov.au/getmedia/412a9df8-1773-47c4-b29f-51f70f697c7b/DVS_P_Safe_Towing_Guide.pdf"
+        },
+        "gvm": {
+          "label": "GVM",
+          "long_name": "Gross Vehicle Mass",
+          "plate_hint": "Vehicle compliance plate / handbook. Max laden mass of the tow vehicle incl. occupants, load and tow-ball mass. Some cars call it MLVM.",
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans"
+        },
+        "gcm": {
+          "label": "GCM",
+          "long_name": "Gross Combination Mass",
+          "plate_hint": "Vehicle handbook. Max combined mass of loaded car + loaded van. Not all vehicles publish one; may be less than GVM + towing capacity.",
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans"
+        },
+        "tow_capacity": {
+          "label": "Max braked towing capacity",
+          "long_name": "Manufacturer maximum braked towing mass",
+          "plate_hint": "Vehicle handbook / towbar plate. If the towbar rating is lower, the lower figure applies.",
+          "source": "https://www.nsw.gov.au/driving-boating-and-transport/roads-safety-and-rules/vehicle-safety-and-compliance/towing-a-caravan"
+        },
+        "ball_max_vehicle": {
+          "label": "Max tow-ball download",
+          "long_name": "Vehicle maximum tow-ball (hitch) download",
+          "plate_hint": "Vehicle handbook and towbar plate. Lower of the two applies.",
+          "source": "https://www.transport.wa.gov.au/getmedia/412a9df8-1773-47c4-b29f-51f70f697c7b/DVS_P_Safe_Towing_Guide.pdf"
+        },
+        "towbar_rating": {
+          "label": "Towbar rating",
+          "long_name": "Towbar plate: towing mass + ball mass",
+          "plate_hint": "Stamped on the towbar plate.",
+          "source": "https://www.transport.wa.gov.au/getmedia/412a9df8-1773-47c4-b29f-51f70f697c7b/DVS_P_Safe_Towing_Guide.pdf"
+        },
+        "axle_capacity": {
+          "label": "Axle capacity",
+          "long_name": "Front / rear axle load capacity",
+          "plate_hint": "Vehicle handbook or tyre placard.",
+          "source": "https://www.transport.wa.gov.au/getmedia/412a9df8-1773-47c4-b29f-51f70f697c7b/DVS_P_Safe_Towing_Guide.pdf"
+        },
+        "tare": {
+          "label": "Tare",
+          "long_name": "Caravan tare mass",
+          "plate_hint": "Caravan compliance plate. Empty van as delivered; water tanks empty; dealer/aftermarket extras (awning, AC, TV, extra gas) are NOT in tare.",
+          "source": "https://www.infrastructure.gov.au/department/media/publications/vehicle-standards-bulletin-1-revision-6-trailers-aggregate-trailer-mass-45-tonnes-or-less"
+        },
+        "atm": {
+          "label": "ATM",
+          "long_name": "Aggregate Trailer Mass",
+          "plate_hint": "Caravan compliance plate. Max total mass of the loaded van unhitched (on jockey wheel), including ball mass.",
+          "source": "https://www.infrastructure.gov.au/department/media/publications/vehicle-standards-bulletin-1-revision-6-trailers-aggregate-trailer-mass-45-tonnes-or-less"
+        },
+        "gtm": {
+          "label": "GTM",
+          "long_name": "Gross Trailer Mass",
+          "plate_hint": "Caravan compliance plate. Max mass on the van's axles when hitched (ATM minus ball mass).",
+          "source": "https://www.infrastructure.gov.au/department/media/publications/vehicle-standards-bulletin-1-revision-6-trailers-aggregate-trailer-mass-45-tonnes-or-less"
+        },
+        "ball_max_van": {
+          "label": "Max ball loading",
+          "long_name": "Coupling / drawbar maximum ball mass",
+          "plate_hint": "Coupling plate or caravan handbook.",
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans"
+        },
+        "axle_group": {
+          "label": "Axle group rating",
+          "long_name": "Caravan axle group capacity",
+          "plate_hint": "Caravan compliance plate or axle stamp (if shown).",
+          "source": "https://www.transport.wa.gov.au/getmedia/412a9df8-1773-47c4-b29f-51f70f697c7b/DVS_P_Safe_Towing_Guide.pdf"
+        },
+        "tbm": {
+          "label": "TBM",
+          "long_name": "Tow-ball mass (measured or estimated)",
+          "plate_hint": "Measure with a ball scale or weighbridge (unhitched minus hitched car reading).",
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans"
+        },
+        "payload": {
+          "label": "Payload",
+          "long_name": "Remaining load capacity",
+          "plate_hint": "ATM minus tare (van); GVM minus loaded car (vehicle).",
+          "source": "https://www.infrastructure.gov.au/department/media/publications/vehicle-standards-bulletin-1-revision-6-trailers-aggregate-trailer-mass-45-tonnes-or-less"
+        }
+      },
+      "guidance": {
+        "ball_mass_pct_low": 8,
+        "ball_mass_pct_high": 10,
+        "ball_mass_basis": "percent of loaded caravan mass (ATM basis per WA DoT)",
+        "ball_mass_status": "guidance_not_law",
+        "ball_mass_source": "https://www.transport.wa.gov.au/getmedia/412a9df8-1773-47c4-b29f-51f70f697c7b/DVS_P_Safe_Towing_Guide.pdf",
+        "ball_mass_note": "WA DoT: 'Tow hitch download as a guide should be 8-10% of the ATM, up to the tow bar load limit.' NSW Government states 'about 5-10 per cent of the total mass of the trailer plus load'. Your plate/towbar limits always apply.",
+        "watch_margin_pct": 5,
+        "watch_margin_source": "product default (not a regulatory figure)"
+      },
+      "presets": [
+        {
+          "name": "Fresh water tank",
+          "category": "van",
+          "kg_per_l": 1.0,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "approx; enter tank size in litres"
+        },
+        {
+          "name": "Grey water tank",
+          "category": "van",
+          "kg_per_l": 1.0,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "approx; usually empty when towing but fills on trip"
+        },
+        {
+          "name": "9 kg gas cylinder (full)",
+          "category": "van",
+          "kg": 18,
+          "source": "https://www.elgas.com.au/welcome-to-elgas/lpg-gas-cylinders/weight/",
+          "note": "approx; Elgas: 16.2-18.9 kg full, tare 7.8-10.4 kg"
+        },
+        {
+          "name": "4 kg / 4.5 kg gas cylinder (full)",
+          "category": "van",
+          "kg": 10,
+          "source": "https://www.elgas.com.au/welcome-to-elgas/lpg-gas-cylinders/weight/",
+          "note": "approx; Elgas: 8.2-10.3 kg full (3.7 kg gas)"
+        },
+        {
+          "name": "Roll-out awning",
+          "category": "van",
+          "kg": 30,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example figure"
+        },
+        {
+          "name": "Air conditioner",
+          "category": "van",
+          "kg": 35,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example figure"
+        },
+        {
+          "name": "TV",
+          "category": "van",
+          "kg": 7,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example figure"
+        },
+        {
+          "name": "Spare tyre",
+          "category": "van",
+          "kg": 25,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example figure"
+        },
+        {
+          "name": "Mattress (each)",
+          "category": "van",
+          "kg": 22.5,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example: 2 x mattresses 45 kg"
+        },
+        {
+          "name": "Bedding (sheets, pillows, blankets)",
+          "category": "van",
+          "kg": 13,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example: 5 + 2 + 6 kg"
+        },
+        {
+          "name": "Crockery",
+          "category": "van",
+          "kg": 10,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example figure"
+        },
+        {
+          "name": "Pots and pans",
+          "category": "van",
+          "kg": 11,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example figure"
+        },
+        {
+          "name": "Cutlery",
+          "category": "van",
+          "kg": 3,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example figure"
+        },
+        {
+          "name": "Groceries",
+          "category": "van",
+          "kg": 35,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example figure"
+        },
+        {
+          "name": "Cleaning supplies",
+          "category": "van",
+          "kg": 7,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example figure"
+        },
+        {
+          "name": "BBQ",
+          "category": "van",
+          "kg": 25,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example figure"
+        },
+        {
+          "name": "Outdoor chairs (set)",
+          "category": "van",
+          "kg": 15,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example figure"
+        },
+        {
+          "name": "Outdoor table",
+          "category": "van",
+          "kg": 10,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example figure"
+        },
+        {
+          "name": "Bicycle (each)",
+          "category": "either",
+          "kg": 15,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example: 2 x bicycles 30 kg"
+        },
+        {
+          "name": "Luggage / clothes",
+          "category": "either",
+          "kg": 30,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "Transport for NSW example figure"
+        },
+        {
+          "name": "Generator (2 kVA inverter, e.g. Honda EU22i)",
+          "category": "either",
+          "kg": 21,
+          "source": "https://powerequipment.honda.com.au/models/generators/eu22",
+          "note": "dry weight per Honda Australia; add fuel"
+        },
+        {
+          "name": "100 Ah lead-acid battery",
+          "category": "van",
+          "kg": 23.3,
+          "source": "https://cdn.tayna.com/datasheets/L36-100_DATASHEET.pdf",
+          "note": "example: Yuasa L36-100 datasheet, mean weight with acid"
+        },
+        {
+          "name": "Diesel top-up",
+          "category": "car",
+          "kg_per_l": 0.85,
+          "source": "https://www.legislation.gov.au/F2025L00164/asmade/2025-02-24/text/original/pdf",
+          "note": "approx; AU standard density 820-850 kg/m3 at 15 C, upper bound used"
+        }
+      ],
+      "glossary": [
+        {
+          "term": "ATM",
+          "definition": "Aggregate Trailer Mass: total mass of the trailer when carrying the maximum load recommended by the manufacturer, including the mass imposed on the towing vehicle (VSB1 Rev 6). A plate rating, not a weighbridge reading.",
+          "source": "https://www.infrastructure.gov.au/department/media/publications/vehicle-standards-bulletin-1-revision-6-trailers-aggregate-trailer-mass-45-tonnes-or-less"
+        },
+        {
+          "term": "GTM",
+          "definition": "Gross Trailer Mass: mass transmitted to the ground by the trailer's tyres when coupled and carrying the maximum recommended load (VSB1 Rev 6). ATM minus GTM = tow-ball down-weight at full load.",
+          "source": "https://www.infrastructure.gov.au/department/media/publications/vehicle-standards-bulletin-1-revision-6-trailers-aggregate-trailer-mass-45-tonnes-or-less"
+        },
+        {
+          "term": "Tare",
+          "definition": "Total mass of the trailer with no load and fluid reservoirs filled (water and waste tanks excluded); includes coupling mass (VSB1 Rev 6). Aftermarket extras are payload, not tare (Transport for NSW).",
+          "source": "https://www.infrastructure.gov.au/department/media/publications/vehicle-standards-bulletin-1-revision-6-trailers-aggregate-trailer-mass-45-tonnes-or-less"
+        },
+        {
+          "term": "Payload",
+          "definition": "ATM minus tare mass equals the maximum load the trailer can carry (VSB1 Rev 6).",
+          "source": "https://www.infrastructure.gov.au/department/media/publications/vehicle-standards-bulletin-1-revision-6-trailers-aggregate-trailer-mass-45-tonnes-or-less"
+        },
+        {
+          "term": "Tow-ball mass (TBM)",
+          "definition": "Mass the coupling imposes on the tow ball. The vehicle/towbar/coupling maximum 'must not be exceeded' (Transport for NSW). Counts toward the tow vehicle's GVM (WA DoT).",
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans"
+        },
+        {
+          "term": "GVM",
+          "definition": "Gross Vehicle Mass: maximum laden mass of the loaded motor vehicle as specified by the manufacturer; also called MLVM on some passenger vehicles (Transport for NSW).",
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans"
+        },
+        {
+          "term": "GCM",
+          "definition": "Gross Combination Mass: maximum allowable combined mass of the loaded tow vehicle and loaded caravan hitched together, as specified by the vehicle manufacturer. 'Legally, you must not exceed the specified GCM' (Transport for NSW).",
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans"
+        },
+        {
+          "term": "Kerb mass",
+          "definition": "Mass of the vehicle in running order, unoccupied and unladen, fluids and fuel full, standard equipment (WA DoT). Manufacturer definitions vary.",
+          "source": "https://www.transport.wa.gov.au/getmedia/412a9df8-1773-47c4-b29f-51f70f697c7b/DVS_P_Safe_Towing_Guide.pdf"
+        },
+        {
+          "term": "Axle capacity",
+          "definition": "Maximum allowable load on that axle (front or rear), as specified by the manufacturer (WA DoT).",
+          "source": "https://www.transport.wa.gov.au/getmedia/412a9df8-1773-47c4-b29f-51f70f697c7b/DVS_P_Safe_Towing_Guide.pdf"
+        },
+        {
+          "term": "Towing capacity",
+          "definition": "Loaded trailer mass must not exceed the lesser of: towbar/coupling rating, vehicle maximum towing capacity, trailer capacity, tyre capacity (NSW Government). If no manufacturer figure: 1.5 x unladen mass braked, unladen mass unbraked; unbraked max 750 kg.",
+          "source": "https://www.nsw.gov.au/driving-boating-and-transport/roads-safety-and-rules/vehicle-safety-and-compliance/towing-a-caravan"
+        },
+        {
+          "term": "Ball-mass guidance",
+          "definition": "WA DoT: 8-10% of ATM 'as a guide'; NSW Government: 'about 5-10 per cent' of trailer plus load. Guidance, not a limit - your plate figures apply.",
+          "source": "https://www.transport.wa.gov.au/getmedia/412a9df8-1773-47c4-b29f-51f70f697c7b/DVS_P_Safe_Towing_Guide.pdf"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.infrastructure.gov.au/department/media/publications/vehicle-standards-bulletin-1-revision-6-trailers-aggregate-trailer-mass-45-tonnes-or-less",
+          "title": "Vehicle Standards Bulletin 1 (Revision 6), Dept of Infrastructure, May 2023",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "title": "Transport for NSW - Caravans: weighing and loading",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://www.nsw.gov.au/driving-boating-and-transport/roads-safety-and-rules/vehicle-safety-and-compliance/towing-a-caravan",
+          "title": "NSW Government - Towing a trailer or caravan (rules)",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://www.transport.wa.gov.au/getmedia/412a9df8-1773-47c4-b29f-51f70f697c7b/DVS_P_Safe_Towing_Guide.pdf",
+          "title": "WA Department of Transport - Safe Towing Guide (PDF)",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://www.elgas.com.au/welcome-to-elgas/lpg-gas-cylinders/weight/",
+          "title": "Elgas - LPG gas cylinder weight (27 Mar 2023)",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://powerequipment.honda.com.au/models/generators/eu22",
+          "title": "Honda Australia - EU22i generator",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://cdn.tayna.com/datasheets/L36-100_DATASHEET.pdf",
+          "title": "Yuasa L36-100 leisure battery datasheet",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://www.legislation.gov.au/F2025L00164/asmade/2025-02-24/text/original/pdf",
+          "title": "Fuel Quality Standards (Conventional Diesel) Determination 2025",
+          "accessed": "2026-09-18"
+        }
+      ],
+      "disclaimer": "Based on the figures you entered. Informational only - not legal, road-safety, insurance or engineering advice. Ratings come from your compliance plates and manufacturer specifications; check them. Guidance percentages are not limits. A weighbridge is the only way to know actual weights. Not affiliated with any Australian state or territory transport authority, the NHVR, or any vehicle or caravan manufacturer or club.",
+      "authorities_not_affiliated": [
+        "Transport for NSW",
+        "NSW Government",
+        "WA Department of Transport",
+        "Department of Infrastructure, Transport, Regional Development, Communications, Sport and the Arts",
+        "National Heavy Vehicle Regulator (NHVR)",
+        "VicRoads / Department of Transport and Planning (VIC)",
+        "Queensland Department of Transport and Main Roads",
+        "Caravan Industry Association of Australia",
+        "Elgas",
+        "Honda Australia",
+        "Yuasa"
+      ]
+    },
+    {
+      "market": "GB",
+      "pack_version": 1,
+      "effective_from": "2026-09-18",
+      "last_verified": "2026-09-18",
+      "terms": {
+        "kerb": {
+          "label": "Kerbweight",
+          "long_name": "Kerbweight (KW) of tow car",
+          "plate_hint": "Car handbook / V5C. Car in working order with fuel; may include 68 kg driver + 7 kg luggage - definitions vary (NCC).",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        "gvm": {
+          "label": "MAM",
+          "long_name": "Maximum Authorised Mass (GVW / MPW) of tow car",
+          "plate_hint": "Car VIN plate line 2 / handbook. Includes noseweight when towing.",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        "gcm": {
+          "label": "GTW",
+          "long_name": "Gross Train Weight",
+          "plate_hint": "Car VIN plate line 1 / handbook. May be less than MAM + towing limit; 'must not be exceeded' (NCC).",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        "tow_capacity": {
+          "label": "Max towing limit",
+          "long_name": "Manufacturer braked towing limit (MTL)",
+          "plate_hint": "Car handbook / VIN plate (GTW minus MAM).",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        "ball_max_vehicle": {
+          "label": "Max noseweight (car)",
+          "long_name": "Car manufacturer noseweight limit",
+          "plate_hint": "Car handbook. Compare with towbar S-value; the lowest of car, towbar, drawbar and hitch limits applies.",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        "towbar_rating": {
+          "label": "Towbar S-value",
+          "long_name": "Towbar plate: D-value / S-value (noseweight limit)",
+          "plate_hint": "Stamped on towbar type-approval plate.",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        "axle_capacity": {
+          "label": "Plated axle weights",
+          "long_name": "Front / rear axle plated weights",
+          "plate_hint": "Car VIN plate lines 3-4.",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        "tare": {
+          "label": "MiRO",
+          "long_name": "Mass in Running Order (MRO)",
+          "plate_hint": "Caravan weight plate / handbook. Includes standard spec; from 2011 an allowance for gas and hook-up lead; battery only if factory-fitted; water often zero from 2015 - check handbook.",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        "atm": {
+          "label": "MTPLM",
+          "long_name": "Maximum Technically Permissible Laden Mass (caravan MAM)",
+          "plate_hint": "Caravan weight plate (near door or in gas locker). Absolute maximum laden weight.",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        "gtm": {
+          "label": "Axle rating",
+          "long_name": "Caravan axle load rating (if plated)",
+          "plate_hint": "Caravan weight plate or axle plate, if shown. Optional in GB.",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        "ball_max_van": {
+          "label": "Max noseweight (hitch)",
+          "long_name": "Hitch / drawbar noseweight limit",
+          "plate_hint": "Stamped on the hitch coupling (often 100 kg) and drawbar.",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        "axle_group": {
+          "label": "Axle rating",
+          "long_name": "Caravan axle rating",
+          "plate_hint": "Axle plate, if shown.",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        "tbm": {
+          "label": "Noseweight",
+          "long_name": "Noseweight (measured or estimated)",
+          "plate_hint": "Measure with a noseweight gauge at towball height.",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        "payload": {
+          "label": "User payload",
+          "long_name": "Caravan user payload / remaining capacity",
+          "plate_hint": "MTPLM minus MiRO (van); MAM minus loaded car.",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        }
+      },
+      "guidance": {
+        "ball_mass_pct_low": 5,
+        "ball_mass_pct_high": 7,
+        "ball_mass_basis": "percent of actual laden caravan weight (or MTPLM if unknown)",
+        "ball_mass_status": "guidance_not_law",
+        "ball_mass_source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf",
+        "ball_mass_note": "NCC Caravan Towing Guide: noseweight 'within the 5% to 7% range of the caravan's laden weight'; Caravan and Motorhome Club: 5-7% of actual laden weight. Never above the lowest of the car, towbar, drawbar and hitch limits.",
+        "outfit_match_pct_novice": 85,
+        "outfit_match_pct_experienced": 100,
+        "outfit_match_basis": "caravan MTPLM as percent of car kerbweight",
+        "outfit_match_status": "guidance_not_law",
+        "outfit_match_source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf",
+        "outfit_match_note": "NCC: novice 'should not exceed 85%', experienced 'maximum recommended ratio is 100%'. Caravan and Motorhome Club: 85% beginners, 'perhaps up to 90%' experienced, 'Never exceed 100%'. Plate limits (MAM, GTW, MTPLM) take precedence.",
+        "watch_margin_pct": 5,
+        "watch_margin_source": "product default (not a regulatory figure)"
+      },
+      "presets": [
+        {
+          "name": "Fresh water (Aquaroll / onboard tank)",
+          "category": "van",
+          "kg_per_l": 1.0,
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf",
+          "note": "approx; enter litres carried while towing"
+        },
+        {
+          "name": "Waste water (Wastemaster)",
+          "category": "van",
+          "kg_per_l": 1.0,
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf",
+          "note": "approx; normally empty when towing"
+        },
+        {
+          "name": "6 kg propane cylinder (full)",
+          "category": "van",
+          "kg": 17,
+          "source": "https://shop.calor.co.uk/6kg-propane-gas-bottle.html",
+          "note": "approx; Calor: 15-17 kg gross, tare 7.3-10.9 kg"
+        },
+        {
+          "name": "Personal effects, two people",
+          "category": "van",
+          "kg": 100,
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf",
+          "note": "NCC: 'approximately 100kg' for two people"
+        },
+        {
+          "name": "Personal effects, each additional person",
+          "category": "van",
+          "kg": 25,
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf",
+          "note": "NCC: 'A further 25kg for each additional person'"
+        },
+        {
+          "name": "Occupant (adult)",
+          "category": "car",
+          "kg": 75,
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf",
+          "note": "EU kerbweight convention 68 kg driver + 7 kg luggage (NCC); edit to actual"
+        },
+        {
+          "name": "Wind-out awning (Fiamma F45S 300)",
+          "category": "van",
+          "kg": 23,
+          "source": "https://www.agentfiamma.co.uk/fiamma-f45s-motorhome-awning.html",
+          "note": "F45S 260: 19.5 kg; 350: 25 kg; 400: 27 kg"
+        },
+        {
+          "name": "100 Ah leisure battery (lead-acid)",
+          "category": "van",
+          "kg": 23.3,
+          "source": "https://cdn.tayna.com/datasheets/L36-100_DATASHEET.pdf",
+          "note": "Yuasa L36-100 datasheet; only payload if not factory-fitted (NCC)"
+        },
+        {
+          "name": "Bicycle (each)",
+          "category": "either",
+          "kg": 15,
+          "source": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "note": "example figure from Transport for NSW (AU); edit to actual"
+        },
+        {
+          "name": "Diesel top-up",
+          "category": "car",
+          "kg_per_l": 0.85,
+          "source": "https://www.legislation.gov.au/F2025L00164/asmade/2025-02-24/text/original/pdf",
+          "note": "approx; density 820-850 kg/m3 at 15 C per AU standard (EN 590 comparable, not fetched)"
+        }
+      ],
+      "glossary": [
+        {
+          "term": "MTPLM",
+          "definition": "Maximum Technically Permissible Laden Mass (also Maximum Authorised Mass): 'the absolute maximum weight that the caravan must not exceed to be legal on the road', including payload, fluids and belongings (NCC).",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        {
+          "term": "MiRO / MRO",
+          "definition": "Mass in Running Order: mass of the caravan to the manufacturer's standard specification as plated. From 2011 includes an allowance for gas bottles and hook-up cable; leisure battery only if factory-supplied; from 2015 water allowance may be zero (NCC).",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        {
+          "term": "User payload",
+          "definition": "The difference between MTPLM and MRO; covers personal effects and optional/dealer-fitted equipment (NCC).",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        {
+          "term": "Noseweight",
+          "definition": "Downforce the coupling head imposes on the towball, measured with a noseweight gauge; must never exceed the towbar/ball or hitch limit, whichever is lower (NCC).",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        {
+          "term": "Noseweight limit / S-value",
+          "definition": "Maximum vertical static load the towbar supports, on the towbar plate; the car manufacturer sets its own; 'the lowest value is the limit that must be observed' (NCC).",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        {
+          "term": "Kerbweight",
+          "definition": "Weight of the car in working order with fuel and fluids; may include a 68 kg driver and 7 kg luggage allowance; definitions vary by manufacturer (NCC; Directive 95/48/EC per Camping and Caravanning Club).",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        {
+          "term": "MAM / GVW",
+          "definition": "Maximum Authorised Mass (Gross Vehicle Weight, Maximum Permissible Weight): maximum allowable weight of the car fully loaded, including noseweight when towing; on the VIN plate (NCC). GOV.UK: MAM is 'normally shown on a plate or sticker fitted to the vehicle or trailer'.",
+          "source": "https://www.gov.uk/towing-with-car"
+        },
+        {
+          "term": "GTW",
+          "definition": "Gross Train Weight: maximum permitted combined mass of car and trailer per the car manufacturer; may be less than MAM + towing limit; 'must not be exceeded' (NCC).",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        {
+          "term": "Max towing limit",
+          "definition": "Maximum weight of a braked trailer the car is allowed to tow (NCC). Highway Code Rule 98: 'you MUST NOT overload your vehicle or trailer' and should not tow more than the manufacturer recommends.",
+          "source": "https://www.gov.uk/guidance/the-highway-code/rules-for-drivers-and-motorcyclists-89-to-102"
+        },
+        {
+          "term": "85% / 100% outfit match",
+          "definition": "Industry guidance, not law: caravan MTPLM as a percentage of car kerbweight ideally not above 85% for a novice, 100% maximum for experienced (NCC). Plated limits take preference.",
+          "source": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf"
+        },
+        {
+          "term": "Driving licence (category B)",
+          "definition": "GOV.UK: if you got your licence from 1 January 1997 'You can tow a trailer that weighs up to 3,500kg MAM' (category BE), added to your licence automatically. DVLA INF30: 'Since 16 December 2021, if you have passed a car test (B) you can automatically drive a car with a trailer (BE)'. Pre-1997 licences: combination up to 8,250 kg MAM. Glossary only - this app does not check licence entitlement.",
+          "source": "https://assets.publishing.service.gov.uk/media/6876323a55c4bd0544dcae7d/inf30-requirements-for-towing-trailers-in-great-britain.pdf"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.thencc.org.uk/media/hw0f5ew1/ncc-towing-guide.pdf",
+          "title": "NCC Caravan Towing Guide (National Caravan Council, 2022)",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://www.gov.uk/towing-with-car",
+          "title": "GOV.UK - Towing with a car",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://assets.publishing.service.gov.uk/media/6876323a55c4bd0544dcae7d/inf30-requirements-for-towing-trailers-in-great-britain.pdf",
+          "title": "DVLA INF30 - Requirements for towing trailers in Great Britain (6/25)",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://www.gov.uk/guidance/the-highway-code/rules-for-drivers-and-motorcyclists-89-to-102",
+          "title": "The Highway Code - Rule 98 (vehicle towing and loading)",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://www.caravanclub.co.uk/advice-and-training/technical-advice/noseweights/",
+          "title": "Caravan and Motorhome Club - Noseweights",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://www.caravanclub.co.uk/advice-and-training/guide-to-buying-hiring-vehicles/buying-a-car-caravan-or-motorhome/buying-a-towcar/",
+          "title": "Caravan and Motorhome Club - Choosing the right towcar",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://www.campingandcaravanningclub.co.uk/advice/equipment/matching-car-and-caravan/",
+          "title": "Camping and Caravanning Club - Matching car and caravan",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://shop.calor.co.uk/6kg-propane-gas-bottle.html",
+          "title": "Calor - 6kg propane gas bottle",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://www.agentfiamma.co.uk/fiamma-f45s-motorhome-awning.html",
+          "title": "Agent Fiamma UK - F45S specification",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://cdn.tayna.com/datasheets/L36-100_DATASHEET.pdf",
+          "title": "Yuasa L36-100 leisure battery datasheet",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://www.transport.nsw.gov.au/roadsafety/road-users/drivers/caravans",
+          "title": "Transport for NSW - Caravans (bicycle example weight)",
+          "accessed": "2026-09-18"
+        },
+        {
+          "url": "https://www.legislation.gov.au/F2025L00164/asmade/2025-02-24/text/original/pdf",
+          "title": "Fuel Quality Standards (Conventional Diesel) Determination 2025 (density)",
+          "accessed": "2026-09-18"
+        }
+      ],
+      "disclaimer": "Based on the figures you entered. Informational only - not legal, road-safety, insurance or engineering advice. Ratings come from your VIN plate, caravan weight plate and manufacturer handbooks; check them. Percentages shown are industry guidance, not limits. A weighbridge is the only way to know actual weights. Not affiliated with DVLA, DVSA, the Department for Transport, the NCC, any caravan club, or any vehicle or caravan manufacturer.",
+      "authorities_not_affiliated": [
+        "DVLA",
+        "DVSA",
+        "Department for Transport",
+        "National Caravan Council (NCC) and NCC TowCheck",
+        "Caravan and Motorhome Club",
+        "Camping and Caravanning Club",
+        "Calor",
+        "Fiamma",
+        "Yuasa"
+      ]
+    }
+  ]
+}
