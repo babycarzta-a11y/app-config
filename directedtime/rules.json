@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "status": "DRAFT - not published; verified 2026-09-19 against the documents cited below",
+  "last_verified": "2026-09-19",
+  "research_note": "research/directedtime-data-2026-09-19.md",
+  "jurisdictions": [
+    {
+      "code": "ENG",
+      "name": "England",
+      "document": "School Teachers' Pay and Conditions Document 2025 and guidance on school teachers' pay and conditions",
+      "document_url": "https://assets.publishing.service.gov.uk/media/687a6260312ee8a5f0806bb5/School_teachers__pay_and_conditions_document_2025_and_guidance_on_school_teachers__pay_and_conditions.pdf",
+      "document_in_force_from": "2025-09-01",
+      "next_edition_note": "Draft STPCD 2026 (consultation to 2026-09-23, expected in force Nov 2026) proposes INSET days on a time-equivalent basis (twilights/half-days); 1265/195 not proposed to change. Re-verify when published.",
+      "directed_hours_full_time": 1265,
+      "directed_hours_para": "51.5",
+      "working_days": 195,
+      "teaching_days": 190,
+      "inset_days": 5,
+      "working_days_para": "51.2",
+      "part_time": {
+        "hours_rule": "FTE proportion x 1265",
+        "fte_basis": "hours employed in the school's timetabled teaching week / total hours in that week (para 40.1(a)); STTW = time pupils are normally taught (40.1(b)); guidance para 81: excludes break duty, registration, assemblies",
+        "hours_para": "51.6",
+        "days_rule": "not numerically pro-rated; cannot be required on days/part-days not normally worked (51.9; guidance 85)"
+      },
+      "ppa": {
+        "minimum_fraction_of_timetabled_teaching": 0.10,
+        "inside_directed_time": true,
+        "min_unit_minutes": 30,
+        "para": "52.5"
+      },
+      "breaks": {
+        "midday_break_counts": false,
+        "midday_break_para": "52.3",
+        "excluded_from_1265_para": "51.12",
+        "midday_supervision_can_be_directed": false,
+        "midday_supervision_para": "52.2",
+        "morning_break_note": "Document silent; NASUWT guidance: timetabled morning/afternoon breaks count as directed time"
+      },
+      "excluded_roles": [
+        "headteacher", "deputy headteacher", "assistant headteacher",
+        "leading practitioner pay range", "acting allowance for HT/DHT/AHT duties",
+        "unattached teacher paid as headteacher or leadership group"
+      ],
+      "excluded_roles_para": "51.4",
+      "residential_note": "51.3: 195-day rule does not apply to full-time teachers wholly/mainly in residential establishments"
+    },
+    {
+      "code": "WLS",
+      "name": "Wales",
+      "document": "School Teachers' Pay and Conditions (Wales) Document 2025/26 and guidance on school teachers' pay and conditions (revised) - March 2026",
+      "document_url": "https://www.gov.wales/sites/default/files/publications/2026-02/school-teachers%E2%80%99-pay-and-conditions-wales-document-2025-revised-march-2026_0.pdf",
+      "document_in_force_from": "2025-09-01",
+      "directed_hours_full_time": 1265,
+      "directed_hours_para": "51.5",
+      "working_days": 195,
+      "teaching_days": 190,
+      "inset_days": 5,
+      "working_days_para": "51.2",
+      "part_time": {
+        "hours_rule": "FTE proportion x 1265",
+        "hours_para": "51.6 (cross-refs paras 39-40)",
+        "days_rule": "as England (51.9)"
+      },
+      "ppa": {
+        "minimum_fraction_of_timetabled_teaching": 0.10,
+        "inside_directed_time": true,
+        "min_unit_minutes": 30,
+        "para": "52.5"
+      },
+      "breaks": {
+        "midday_break_counts": false,
+        "midday_break_para": "52.3",
+        "excluded_from_1265_para": "51.12",
+        "midday_supervision_can_be_directed": false,
+        "midday_supervision_para": "52.2"
+      },
+      "excluded_roles": [
+        "headteacher", "deputy headteacher", "assistant headteacher",
+        "ALN coordinator", "leading practitioner pay range",
+        "acting allowance for HT/DHT/AHT duties",
+        "unattached teacher paid as headteacher or leadership group"
+      ],
+      "excluded_roles_para": "51.4"
+    },
+    {
+      "code": "NIR",
+      "name": "Northern Ireland",
+      "document": "Teachers' (Terms and Conditions of Employment) Regulations (Northern Ireland) 1987, SR 1987/267, Schedule para 4 (Jordanstown); TNC 2024/2 Workload Agreement",
+      "document_url": "https://www.legislation.gov.uk/nisr/1987/267/pdfs/nisr_19870267_en.pdf",
+      "guidance_url": "https://www.education-ni.gov.uk/sites/default/files/publications/education/TNC%202024-2%20%20Workload%20Agreemeent.pdf",
+      "terminology": "time budget / Directed Time budget",
+      "directed_hours_full_time": 1265,
+      "directed_hours_para": "Sch. 4(b)",
+      "working_days": 195,
+      "teaching_days": 190,
+      "inset_days": 5,
+      "working_days_para": "Sch. 4(a); TNC 2024/2 5.1(c) (5 days inside the 1265)",
+      "year_starts": "07-31",
+      "year_para": "Sch. 4(g)",
+      "weekly_teaching_cap_hours": { "primary_special": 25, "secondary": 23.5, "para": "Sch. 4(c)" },
+      "ppa": {
+        "minimum_fraction_of_directed_time": 0.10,
+        "basis_note": "10% of the 1265 directed-time budget (TNC 2024/2 5.6), NOT 10% of teaching time",
+        "para": "TNC 2024/2 5.6"
+      },
+      "breaks": {
+        "midday_break_minimum_minutes": 30,
+        "midday_break_window": "12:00-14:00 (nursery 12:00-14:30)",
+        "midday_break_para": "Sch. 4(e), 4(f)",
+        "midday_supervision_can_be_directed": false,
+        "midday_supervision_para": "Sch. 4(d)"
+      },
+      "part_time": {
+        "hours_rule": "NOT VERIFIED in fetched NI documents - do not ship a NI pro-rata formula without checking TNC part-time guidance"
+      }
+    }
+  ],
+  "excluded_jurisdictions": ["SCT"]
+}

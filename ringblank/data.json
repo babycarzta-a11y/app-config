@@ -1,0 +1,1201 @@
+{
+ "schema_version": 1,
+ "generated": "2026-09-19",
+ "status": "DRAFT - not published",
+ "notes": [
+  "Densities: one primary per alloy with source URLs; ranges recorded where sources disagree beyond rounding (research/ringblank-data-2026-09-19.md section 1). Cooksongold-derived values = 21.45 / relative factor and are marked derived.",
+  "Ring size tables are generated from formulas (no supplier chart copied): US ID_mm = 0.8128*size + 11.63 (Wikipedia; cross-checked vs Rio Grande PDF within 0.06 mm for sizes 3-10); UK BS 6820:1987 circ = 37.5 + 1.25*index(A=0), half = +0.625; ISO 8653 / JIS S 4700 size = inner circumference mm; JCS gou ID_mm = 13.0 + (n-1)/3.",
+  "The Japanese 'gou' system is JCS (Japan Custom Size), not JIS S 4700 (which is the ISO circumference number). Requirements wording should be corrected.",
+  "Disputed UK M: BS 6820 formula gives 16.71 mm ID; retail charts show 16.51-16.92. Shipped value 16.71 with footnote.",
+  "Gauge: B&S/AWG per ASTM B258 formula d_in = 0.005*92^((36-n)/39); matches Wikipedia table on all rows 0-30.",
+  "Wide band: published rule is flat +0.5 mm when width > 4 mm (Rio Grande PDF; Orchid janetb 2021). No per-mm slope found; the '+0.5 x (width-4)' form in research section 4 is unsourced. Alternatives: +1/4 US size (iMakeJewelry per Orchid), +1/2 size (Orchid 2011).",
+  "Carit kill-watch 2026-09-19: v1.2.3 (Jun 11), ring blank free, weight calcs Pro ($8.99/mo, $69.99/yr) - unchanged."
+ ],
+ "alloys": [
+  {
+   "id": "ag999",
+   "name": "Fine silver 999",
+   "density_g_cm3": 10.49,
+   "sources": [
+    "http://www.hauserandmiller.com/reference/melting.html",
+    "https://kassoy.com/images/SC-Density_Jewelry%20Density%20Table.pdf"
+   ],
+   "range_seen": [
+    10.49,
+    10.53
+   ],
+   "verified": true
+  },
+  {
+   "id": "ag925",
+   "name": "Sterling silver 925",
+   "density_g_cm3": 10.36,
+   "sources": [
+    "http://www.hauserandmiller.com/reference/melting.html",
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/"
+   ],
+   "range_seen": [
+    10.26,
+    10.4
+   ],
+   "verified": true
+  },
+  {
+   "id": "au24",
+   "name": "Gold 24k",
+   "density_g_cm3": 19.32,
+   "sources": [
+    "http://www.hauserandmiller.com/reference/melting.html",
+    "https://kassoy.com/images/SC-Density_Jewelry%20Density%20Table.pdf"
+   ],
+   "range_seen": [
+    19.32,
+    19.36
+   ],
+   "verified": true
+  },
+  {
+   "id": "au22y",
+   "name": "Gold 22k yellow",
+   "density_g_cm3": 17.7,
+   "sources": [
+    "https://www.quicktest.co.uk/blogs/testing-precious-metals/testing-gold-specific-gravity-method",
+    "https://kassoy.com/images/SC-Density_Jewelry%20Density%20Table.pdf"
+   ],
+   "range_seen": [
+    17.6,
+    18.1
+   ],
+   "note": "Cooksongold 22ct DS derived 17.73",
+   "verified": true
+  },
+  {
+   "id": "au18y",
+   "name": "Gold 18k yellow",
+   "density_g_cm3": 15.58,
+   "sources": [
+    "http://www.hauserandmiller.com/reference/melting.html",
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/"
+   ],
+   "range_seen": [
+    15.2,
+    15.9
+   ],
+   "verified": true
+  },
+  {
+   "id": "au18w",
+   "name": "Gold 18k white (Ni)",
+   "density_g_cm3": 14.64,
+   "sources": [
+    "http://www.hauserandmiller.com/reference/melting.html",
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/"
+   ],
+   "range_seen": [
+    14.6,
+    16.9
+   ],
+   "note": "Pd-white is heavier: Cooksongold 18ct MW derived 16.13",
+   "verified": true
+  },
+  {
+   "id": "au18w_pd",
+   "name": "Gold 18k white (Pd)",
+   "density_g_cm3": 16.1,
+   "sources": [
+    "https://www.cooksongold.com/scripts/comparative.js",
+    "https://www.quicktest.co.uk/blogs/testing-precious-metals/testing-gold-specific-gravity-method"
+   ],
+   "range_seen": [
+    15.8,
+    16.9
+   ],
+   "note": "derived from Cooksongold factor 1.33 (21.45/1.33); Quicktest range upper 16.9",
+   "verified": true
+  },
+  {
+   "id": "au18r",
+   "name": "Gold 18k rose",
+   "density_g_cm3": 15.18,
+   "sources": [
+    "http://www.hauserandmiller.com/reference/melting.html",
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/"
+   ],
+   "range_seen": [
+    15.0,
+    15.2
+   ],
+   "verified": true
+  },
+  {
+   "id": "au14y",
+   "name": "Gold 14k yellow",
+   "density_g_cm3": 13.07,
+   "sources": [
+    "http://www.hauserandmiller.com/reference/melting.html",
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/"
+   ],
+   "range_seen": [
+    13.0,
+    13.4
+   ],
+   "verified": true
+  },
+  {
+   "id": "au14w",
+   "name": "Gold 14k white (Ni)",
+   "density_g_cm3": 12.61,
+   "sources": [
+    "http://www.hauserandmiller.com/reference/melting.html",
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/"
+   ],
+   "range_seen": [
+    12.6,
+    14.8
+   ],
+   "note": "Kassoy 'K14 W.G.' 14.82 is Pd-white",
+   "verified": true
+  },
+  {
+   "id": "au14r",
+   "name": "Gold 14k rose",
+   "density_g_cm3": 13.26,
+   "sources": [
+    "http://www.hauserandmiller.com/reference/melting.html",
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/"
+   ],
+   "verified": true
+  },
+  {
+   "id": "au10y",
+   "name": "Gold 10k yellow",
+   "density_g_cm3": 11.57,
+   "sources": [
+    "http://www.hauserandmiller.com/reference/melting.html",
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/"
+   ],
+   "range_seen": [
+    11.5,
+    13.0
+   ],
+   "verified": true
+  },
+  {
+   "id": "au10w",
+   "name": "Gold 10k white",
+   "density_g_cm3": 11.07,
+   "sources": [
+    "http://www.hauserandmiller.com/reference/melting.html",
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/"
+   ],
+   "verified": true
+  },
+  {
+   "id": "au10r",
+   "name": "Gold 10k rose",
+   "density_g_cm3": 11.59,
+   "sources": [
+    "http://www.hauserandmiller.com/reference/melting.html",
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/"
+   ],
+   "verified": true
+  },
+  {
+   "id": "au9y",
+   "name": "Gold 9k yellow",
+   "density_g_cm3": 11.2,
+   "sources": [
+    "https://www.cooksongold.com/scripts/comparative.js",
+    "https://www.quicktest.co.uk/blogs/testing-precious-metals/testing-gold-specific-gravity-method"
+   ],
+   "range_seen": [
+    10.9,
+    12.7
+   ],
+   "note": "derived from Cooksongold 9ct DF factor 1.92 (21.45/1.92 = 11.17); no US source",
+   "verified": true
+  },
+  {
+   "id": "pt950",
+   "name": "Platinum 950",
+   "density_g_cm3": 20.1,
+   "sources": [
+    "https://www.quicktest.co.uk/blogs/testing-precious-metals/testing-gold-specific-gravity-method",
+    "https://kassoy.com/images/SC-Density_Jewelry%20Density%20Table.pdf"
+   ],
+   "range_seen": [
+    20.0,
+    20.8
+   ],
+   "note": "Quicktest '950 Platinum 20.1'; Pt/Co 20.8 (Stuller, Ganoksin); Pt/Ru value not fetched. Label alloy in UI.",
+   "verified": true
+  },
+  {
+   "id": "pt950co",
+   "name": "Platinum 950 (Co)",
+   "density_g_cm3": 20.8,
+   "sources": [
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/",
+    "https://www.ganoksin.com/article/platinum-alloy-applications-for-jewelry/"
+   ],
+   "verified": true
+  },
+  {
+   "id": "pt900ir",
+   "name": "Platinum 900 (Ir)",
+   "density_g_cm3": 21.54,
+   "sources": [
+    "http://www.hauserandmiller.com/reference/melting.html",
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/"
+   ],
+   "verified": true
+  },
+  {
+   "id": "pd950",
+   "name": "Palladium 950",
+   "density_g_cm3": 12.0,
+   "sources": [
+    "https://www.quicktest.co.uk/blogs/testing-precious-metals/testing-gold-specific-gravity-method",
+    "https://kassoy.com/images/SC-Density_Jewelry%20Density%20Table.pdf"
+   ],
+   "range_seen": [
+    11.7,
+    12.0
+   ],
+   "note": "Kassoy pure Pd 12.02; Cooksongold GW Pd derived 11.66",
+   "verified": true
+  },
+  {
+   "id": "brass_c260",
+   "name": "Brass, yellow 70/30 (C260)",
+   "density_g_cm3": 8.53,
+   "sources": [
+    "https://alloys.copper.org/alloy/C26000",
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/"
+   ],
+   "range_seen": [
+    8.4,
+    8.7
+   ],
+   "note": "Stuller 'Brass' 8.40; Cooksongold 90/10 derived 8.68",
+   "verified": true
+  },
+  {
+   "id": "bronze_c226",
+   "name": "Jeweler's bronze / NuGold (C226)",
+   "density_g_cm3": 8.78,
+   "sources": [
+    "https://alloys.copper.org/alloy/C22600",
+    "https://alloys.copper.org/alloy/C23000"
+   ],
+   "range_seen": [
+    8.4,
+    8.9
+   ],
+   "note": "'Bronze' generic 8.4-8.7 (Quicktest); red brass C230 8.75",
+   "verified": true
+  },
+  {
+   "id": "cu",
+   "name": "Copper",
+   "density_g_cm3": 8.94,
+   "sources": [
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/",
+    "http://www.hauserandmiller.com/reference/melting.html"
+   ],
+   "range_seen": [
+    8.93,
+    8.96
+   ],
+   "verified": true
+  },
+  {
+   "id": "nisilver_c752",
+   "name": "Nickel silver 65-18 (C752)",
+   "density_g_cm3": 8.75,
+   "sources": [
+    "https://alloys.copper.org/alloy/C75200",
+    "https://www.engineeringtoolbox.com/metal-alloys-densities-d_50.html"
+   ],
+   "range_seen": [
+    8.4,
+    8.9
+   ],
+   "verified": true
+  },
+  {
+   "id": "ti_cp",
+   "name": "Titanium (CP)",
+   "density_g_cm3": 4.51,
+   "sources": [
+    "https://kassoy.com/images/SC-Density_Jewelry%20Density%20Table.pdf",
+    "https://www.engineeringtoolbox.com/metal-alloys-densities-d_50.html"
+   ],
+   "range_seen": [
+    4.5,
+    4.51
+   ],
+   "verified": true
+  },
+  {
+   "id": "ss316",
+   "name": "Stainless steel 316",
+   "density_g_cm3": 8.0,
+   "sources": [
+    "https://www.azom.com/article.aspx?ArticleID=863",
+    "https://www.engineeringtoolbox.com/metal-alloys-densities-d_50.html"
+   ],
+   "range_seen": [
+    7.5,
+    8.0
+   ],
+   "verified": true
+  },
+  {
+   "id": "wax",
+   "name": "Casting wax",
+   "density_g_cm3": 1.0,
+   "sources": [
+    "https://www.stuller.com/articles/view/where-to-find-gravity-of-materials/",
+    "https://www.cooksongold.com/scripts/comparative.js"
+   ],
+   "note": "editable; injection waxes vary",
+   "verified": true
+  }
+ ],
+ "alloys_not_verified": [
+  "Gold 9k white/rose",
+  "Gold 22k white/rose",
+  "Platinum 950 Ru (fetched figure)",
+  "Hoover & Strong / Rio Grande / Chemgold values (unreadable or 403)"
+ ],
+ "ring_blank": {
+  "formula": "length = (inner_diameter + metal_thickness) * pi",
+  "source": "https://www.riogrande.com/globalassets/ringblanksizingguidepdf.pdf",
+  "wide_band": {
+   "threshold_width_mm": 4.0,
+   "mode": "flat",
+   "add_mm": 0.5,
+   "per_mm_slope": null,
+   "per_mm_slope_verified": false,
+   "alternatives": [
+    {
+     "label": "+1/4 US size",
+     "source": "https://orchid.ganoksin.com/t/ring-blank-estimation/65077"
+    },
+    {
+     "label": "+1/2 US size",
+     "source": "https://orchid.ganoksin.com/t/calculating-ring-blank-length/41512"
+    }
+   ],
+   "sources": [
+    "https://www.riogrande.com/globalassets/ringblanksizingguidepdf.pdf",
+    "https://orchid.ganoksin.com/t/ring-blank-estimation/65077",
+    "https://nancylthamilton.com/resources/charts/ring-blank-sizing/"
+   ]
+  }
+ },
+ "ring_sizes": {
+  "iso8653": {
+   "definition": "size = inner circumference in mm",
+   "range": [
+    41,
+    76
+   ],
+   "sources": [
+    "https://en.wikipedia.org/wiki/Ring_size",
+    "https://kikakurui.com/s/S4700-1998-01.html"
+   ]
+  },
+  "us": {
+   "formula": "id_mm = 0.8128*size + 11.63",
+   "half_size_step_mm": 0.4064,
+   "source": "https://en.wikipedia.org/wiki/Ring_size",
+   "crosscheck": "https://www.riogrande.com/globalassets/ringblanksizingguidepdf.pdf",
+   "rows": [
+    {
+     "us": 1.0,
+     "id_mm": 12.44,
+     "circ_mm": 39.1
+    },
+    {
+     "us": 1.5,
+     "id_mm": 12.85,
+     "circ_mm": 40.4
+    },
+    {
+     "us": 2.0,
+     "id_mm": 13.26,
+     "circ_mm": 41.6
+    },
+    {
+     "us": 2.5,
+     "id_mm": 13.66,
+     "circ_mm": 42.9
+    },
+    {
+     "us": 3.0,
+     "id_mm": 14.07,
+     "circ_mm": 44.2
+    },
+    {
+     "us": 3.5,
+     "id_mm": 14.47,
+     "circ_mm": 45.5
+    },
+    {
+     "us": 4.0,
+     "id_mm": 14.88,
+     "circ_mm": 46.8
+    },
+    {
+     "us": 4.5,
+     "id_mm": 15.29,
+     "circ_mm": 48.0
+    },
+    {
+     "us": 5.0,
+     "id_mm": 15.69,
+     "circ_mm": 49.3
+    },
+    {
+     "us": 5.5,
+     "id_mm": 16.1,
+     "circ_mm": 50.6
+    },
+    {
+     "us": 6.0,
+     "id_mm": 16.51,
+     "circ_mm": 51.9
+    },
+    {
+     "us": 6.5,
+     "id_mm": 16.91,
+     "circ_mm": 53.1
+    },
+    {
+     "us": 7.0,
+     "id_mm": 17.32,
+     "circ_mm": 54.4
+    },
+    {
+     "us": 7.5,
+     "id_mm": 17.73,
+     "circ_mm": 55.7
+    },
+    {
+     "us": 8.0,
+     "id_mm": 18.13,
+     "circ_mm": 57.0
+    },
+    {
+     "us": 8.5,
+     "id_mm": 18.54,
+     "circ_mm": 58.2
+    },
+    {
+     "us": 9.0,
+     "id_mm": 18.95,
+     "circ_mm": 59.5
+    },
+    {
+     "us": 9.5,
+     "id_mm": 19.35,
+     "circ_mm": 60.8
+    },
+    {
+     "us": 10.0,
+     "id_mm": 19.76,
+     "circ_mm": 62.1
+    },
+    {
+     "us": 10.5,
+     "id_mm": 20.16,
+     "circ_mm": 63.3
+    },
+    {
+     "us": 11.0,
+     "id_mm": 20.57,
+     "circ_mm": 64.6
+    },
+    {
+     "us": 11.5,
+     "id_mm": 20.98,
+     "circ_mm": 65.9
+    },
+    {
+     "us": 12.0,
+     "id_mm": 21.38,
+     "circ_mm": 67.2
+    },
+    {
+     "us": 12.5,
+     "id_mm": 21.79,
+     "circ_mm": 68.5
+    },
+    {
+     "us": 13.0,
+     "id_mm": 22.2,
+     "circ_mm": 69.7
+    },
+    {
+     "us": 13.5,
+     "id_mm": 22.6,
+     "circ_mm": 71.0
+    },
+    {
+     "us": 14.0,
+     "id_mm": 23.01,
+     "circ_mm": 72.3
+    }
+   ]
+  },
+  "uk": {
+   "standard": "BS 6820:1987",
+   "formula": "circ_mm = 37.5 + 1.25*index(A=0) (+0.625 half)",
+   "source": "https://www.ringsizes.biz/uk.htm",
+   "disputed": {
+    "M": {
+     "shipped_id_mm": 16.71,
+     "other_charts_id_mm": [
+      16.51,
+      16.92
+     ]
+    }
+   },
+   "rows": [
+    {
+     "uk": "A",
+     "circ_mm": 37.5,
+     "id_mm": 11.94
+    },
+    {
+     "uk": "A½",
+     "circ_mm": 38.125,
+     "id_mm": 12.14
+    },
+    {
+     "uk": "B",
+     "circ_mm": 38.75,
+     "id_mm": 12.33
+    },
+    {
+     "uk": "B½",
+     "circ_mm": 39.375,
+     "id_mm": 12.53
+    },
+    {
+     "uk": "C",
+     "circ_mm": 40.0,
+     "id_mm": 12.73
+    },
+    {
+     "uk": "C½",
+     "circ_mm": 40.625,
+     "id_mm": 12.93
+    },
+    {
+     "uk": "D",
+     "circ_mm": 41.25,
+     "id_mm": 13.13
+    },
+    {
+     "uk": "D½",
+     "circ_mm": 41.875,
+     "id_mm": 13.33
+    },
+    {
+     "uk": "E",
+     "circ_mm": 42.5,
+     "id_mm": 13.53
+    },
+    {
+     "uk": "E½",
+     "circ_mm": 43.125,
+     "id_mm": 13.73
+    },
+    {
+     "uk": "F",
+     "circ_mm": 43.75,
+     "id_mm": 13.93
+    },
+    {
+     "uk": "F½",
+     "circ_mm": 44.375,
+     "id_mm": 14.13
+    },
+    {
+     "uk": "G",
+     "circ_mm": 45.0,
+     "id_mm": 14.32
+    },
+    {
+     "uk": "G½",
+     "circ_mm": 45.625,
+     "id_mm": 14.52
+    },
+    {
+     "uk": "H",
+     "circ_mm": 46.25,
+     "id_mm": 14.72
+    },
+    {
+     "uk": "H½",
+     "circ_mm": 46.875,
+     "id_mm": 14.92
+    },
+    {
+     "uk": "I",
+     "circ_mm": 47.5,
+     "id_mm": 15.12
+    },
+    {
+     "uk": "I½",
+     "circ_mm": 48.125,
+     "id_mm": 15.32
+    },
+    {
+     "uk": "J",
+     "circ_mm": 48.75,
+     "id_mm": 15.52
+    },
+    {
+     "uk": "J½",
+     "circ_mm": 49.375,
+     "id_mm": 15.72
+    },
+    {
+     "uk": "K",
+     "circ_mm": 50.0,
+     "id_mm": 15.92
+    },
+    {
+     "uk": "K½",
+     "circ_mm": 50.625,
+     "id_mm": 16.11
+    },
+    {
+     "uk": "L",
+     "circ_mm": 51.25,
+     "id_mm": 16.31
+    },
+    {
+     "uk": "L½",
+     "circ_mm": 51.875,
+     "id_mm": 16.51
+    },
+    {
+     "uk": "M",
+     "circ_mm": 52.5,
+     "id_mm": 16.71
+    },
+    {
+     "uk": "M½",
+     "circ_mm": 53.125,
+     "id_mm": 16.91
+    },
+    {
+     "uk": "N",
+     "circ_mm": 53.75,
+     "id_mm": 17.11
+    },
+    {
+     "uk": "N½",
+     "circ_mm": 54.375,
+     "id_mm": 17.31
+    },
+    {
+     "uk": "O",
+     "circ_mm": 55.0,
+     "id_mm": 17.51
+    },
+    {
+     "uk": "O½",
+     "circ_mm": 55.625,
+     "id_mm": 17.71
+    },
+    {
+     "uk": "P",
+     "circ_mm": 56.25,
+     "id_mm": 17.9
+    },
+    {
+     "uk": "P½",
+     "circ_mm": 56.875,
+     "id_mm": 18.1
+    },
+    {
+     "uk": "Q",
+     "circ_mm": 57.5,
+     "id_mm": 18.3
+    },
+    {
+     "uk": "Q½",
+     "circ_mm": 58.125,
+     "id_mm": 18.5
+    },
+    {
+     "uk": "R",
+     "circ_mm": 58.75,
+     "id_mm": 18.7
+    },
+    {
+     "uk": "R½",
+     "circ_mm": 59.375,
+     "id_mm": 18.9
+    },
+    {
+     "uk": "S",
+     "circ_mm": 60.0,
+     "id_mm": 19.1
+    },
+    {
+     "uk": "S½",
+     "circ_mm": 60.625,
+     "id_mm": 19.3
+    },
+    {
+     "uk": "T",
+     "circ_mm": 61.25,
+     "id_mm": 19.5
+    },
+    {
+     "uk": "T½",
+     "circ_mm": 61.875,
+     "id_mm": 19.7
+    },
+    {
+     "uk": "U",
+     "circ_mm": 62.5,
+     "id_mm": 19.89
+    },
+    {
+     "uk": "U½",
+     "circ_mm": 63.125,
+     "id_mm": 20.09
+    },
+    {
+     "uk": "V",
+     "circ_mm": 63.75,
+     "id_mm": 20.29
+    },
+    {
+     "uk": "V½",
+     "circ_mm": 64.375,
+     "id_mm": 20.49
+    },
+    {
+     "uk": "W",
+     "circ_mm": 65.0,
+     "id_mm": 20.69
+    },
+    {
+     "uk": "W½",
+     "circ_mm": 65.625,
+     "id_mm": 20.89
+    },
+    {
+     "uk": "X",
+     "circ_mm": 66.25,
+     "id_mm": 21.09
+    },
+    {
+     "uk": "X½",
+     "circ_mm": 66.875,
+     "id_mm": 21.29
+    },
+    {
+     "uk": "Y",
+     "circ_mm": 67.5,
+     "id_mm": 21.49
+    },
+    {
+     "uk": "Y½",
+     "circ_mm": 68.125,
+     "id_mm": 21.68
+    },
+    {
+     "uk": "Z",
+     "circ_mm": 68.75,
+     "id_mm": 21.88
+    },
+    {
+     "uk": "Z½",
+     "circ_mm": 69.375,
+     "id_mm": 22.08
+    },
+    {
+     "uk": "Z+1",
+     "circ_mm": 70.0,
+     "id_mm": 22.28
+    },
+    {
+     "uk": "Z+2",
+     "circ_mm": 71.25,
+     "id_mm": 22.68
+    },
+    {
+     "uk": "Z+3",
+     "circ_mm": 72.5,
+     "id_mm": 23.08
+    },
+    {
+     "uk": "Z+4",
+     "circ_mm": 73.75,
+     "id_mm": 23.48
+    }
+   ]
+  },
+  "jcs": {
+   "standard": "JCS (Japan Custom Size); JIS S 4700 uses ISO circumference",
+   "formula": "id_mm = 13.0 + (n-1)/3",
+   "sources": [
+    "https://okuraya.jp/column/ring-size/",
+    "https://www.preciousplatinum.jp/column/jewelry/col9-2/"
+   ],
+   "rows": [
+    {
+     "jcs": 1,
+     "id_mm": 13.0,
+     "circ_mm": 40.8
+    },
+    {
+     "jcs": 2,
+     "id_mm": 13.33,
+     "circ_mm": 41.9
+    },
+    {
+     "jcs": 3,
+     "id_mm": 13.67,
+     "circ_mm": 42.9
+    },
+    {
+     "jcs": 4,
+     "id_mm": 14.0,
+     "circ_mm": 44.0
+    },
+    {
+     "jcs": 5,
+     "id_mm": 14.33,
+     "circ_mm": 45.0
+    },
+    {
+     "jcs": 6,
+     "id_mm": 14.67,
+     "circ_mm": 46.1
+    },
+    {
+     "jcs": 7,
+     "id_mm": 15.0,
+     "circ_mm": 47.1
+    },
+    {
+     "jcs": 8,
+     "id_mm": 15.33,
+     "circ_mm": 48.2
+    },
+    {
+     "jcs": 9,
+     "id_mm": 15.67,
+     "circ_mm": 49.2
+    },
+    {
+     "jcs": 10,
+     "id_mm": 16.0,
+     "circ_mm": 50.3
+    },
+    {
+     "jcs": 11,
+     "id_mm": 16.33,
+     "circ_mm": 51.3
+    },
+    {
+     "jcs": 12,
+     "id_mm": 16.67,
+     "circ_mm": 52.4
+    },
+    {
+     "jcs": 13,
+     "id_mm": 17.0,
+     "circ_mm": 53.4
+    },
+    {
+     "jcs": 14,
+     "id_mm": 17.33,
+     "circ_mm": 54.5
+    },
+    {
+     "jcs": 15,
+     "id_mm": 17.67,
+     "circ_mm": 55.5
+    },
+    {
+     "jcs": 16,
+     "id_mm": 18.0,
+     "circ_mm": 56.5
+    },
+    {
+     "jcs": 17,
+     "id_mm": 18.33,
+     "circ_mm": 57.6
+    },
+    {
+     "jcs": 18,
+     "id_mm": 18.67,
+     "circ_mm": 58.6
+    },
+    {
+     "jcs": 19,
+     "id_mm": 19.0,
+     "circ_mm": 59.7
+    },
+    {
+     "jcs": 20,
+     "id_mm": 19.33,
+     "circ_mm": 60.7
+    },
+    {
+     "jcs": 21,
+     "id_mm": 19.67,
+     "circ_mm": 61.8
+    },
+    {
+     "jcs": 22,
+     "id_mm": 20.0,
+     "circ_mm": 62.8
+    },
+    {
+     "jcs": 23,
+     "id_mm": 20.33,
+     "circ_mm": 63.9
+    },
+    {
+     "jcs": 24,
+     "id_mm": 20.67,
+     "circ_mm": 64.9
+    },
+    {
+     "jcs": 25,
+     "id_mm": 21.0,
+     "circ_mm": 66.0
+    },
+    {
+     "jcs": 26,
+     "id_mm": 21.33,
+     "circ_mm": 67.0
+    },
+    {
+     "jcs": 27,
+     "id_mm": 21.67,
+     "circ_mm": 68.1
+    },
+    {
+     "jcs": 28,
+     "id_mm": 22.0,
+     "circ_mm": 69.1
+    },
+    {
+     "jcs": 29,
+     "id_mm": 22.33,
+     "circ_mm": 70.2
+    },
+    {
+     "jcs": 30,
+     "id_mm": 22.67,
+     "circ_mm": 71.2
+    }
+   ]
+  }
+ },
+ "gauge_bs": {
+  "standard": "ASTM B258 (AWG / B&S)",
+  "formula": "d_in = 0.005 * 92^((36-n)/39)",
+  "source": "https://en.wikipedia.org/wiki/American_wire_gauge",
+  "rows": [
+   {
+    "gauge": 0,
+    "in": 0.3249,
+    "mm": 8.251
+   },
+   {
+    "gauge": 1,
+    "in": 0.2893,
+    "mm": 7.348
+   },
+   {
+    "gauge": 2,
+    "in": 0.2576,
+    "mm": 6.544
+   },
+   {
+    "gauge": 3,
+    "in": 0.2294,
+    "mm": 5.827
+   },
+   {
+    "gauge": 4,
+    "in": 0.2043,
+    "mm": 5.189
+   },
+   {
+    "gauge": 5,
+    "in": 0.1819,
+    "mm": 4.621
+   },
+   {
+    "gauge": 6,
+    "in": 0.162,
+    "mm": 4.115
+   },
+   {
+    "gauge": 7,
+    "in": 0.1443,
+    "mm": 3.665
+   },
+   {
+    "gauge": 8,
+    "in": 0.1285,
+    "mm": 3.264
+   },
+   {
+    "gauge": 9,
+    "in": 0.1144,
+    "mm": 2.906
+   },
+   {
+    "gauge": 10,
+    "in": 0.1019,
+    "mm": 2.588
+   },
+   {
+    "gauge": 11,
+    "in": 0.0907,
+    "mm": 2.305
+   },
+   {
+    "gauge": 12,
+    "in": 0.0808,
+    "mm": 2.053
+   },
+   {
+    "gauge": 13,
+    "in": 0.072,
+    "mm": 1.828
+   },
+   {
+    "gauge": 14,
+    "in": 0.0641,
+    "mm": 1.628
+   },
+   {
+    "gauge": 15,
+    "in": 0.0571,
+    "mm": 1.45
+   },
+   {
+    "gauge": 16,
+    "in": 0.0508,
+    "mm": 1.291
+   },
+   {
+    "gauge": 17,
+    "in": 0.0453,
+    "mm": 1.15
+   },
+   {
+    "gauge": 18,
+    "in": 0.0403,
+    "mm": 1.024
+   },
+   {
+    "gauge": 19,
+    "in": 0.0359,
+    "mm": 0.912
+   },
+   {
+    "gauge": 20,
+    "in": 0.032,
+    "mm": 0.812
+   },
+   {
+    "gauge": 21,
+    "in": 0.0285,
+    "mm": 0.723
+   },
+   {
+    "gauge": 22,
+    "in": 0.0253,
+    "mm": 0.644
+   },
+   {
+    "gauge": 23,
+    "in": 0.0226,
+    "mm": 0.573
+   },
+   {
+    "gauge": 24,
+    "in": 0.0201,
+    "mm": 0.511
+   },
+   {
+    "gauge": 25,
+    "in": 0.0179,
+    "mm": 0.455
+   },
+   {
+    "gauge": 26,
+    "in": 0.0159,
+    "mm": 0.405
+   },
+   {
+    "gauge": 27,
+    "in": 0.0142,
+    "mm": 0.361
+   },
+   {
+    "gauge": 28,
+    "in": 0.0126,
+    "mm": 0.321
+   },
+   {
+    "gauge": 29,
+    "in": 0.0113,
+    "mm": 0.286
+   },
+   {
+    "gauge": 30,
+    "in": 0.01,
+    "mm": 0.255
+   }
+  ]
+ },
+ "carit_watch": {
+  "date": "2026-09-19",
+  "version": "1.2.3",
+  "version_date": "2026-06-11",
+  "free": [
+   "ring blank length",
+   "ring size charts",
+   "spot prices",
+   "unit converter",
+   "stone size charts",
+   "gemstone reference"
+  ],
+  "pro": [
+   "metal value",
+   "casting weight",
+   "wire/sheet/tube weight",
+   "ring weight + pricing",
+   "sizing calc + pricing",
+   "models library",
+   "quote builder",
+   "halo calc",
+   "STL viewer"
+  ],
+  "iap": {
+   "monthly_usd": 8.99,
+   "yearly_usd": 69.99
+  },
+  "source": "https://apps.apple.com/us/app/carit/id6761501849"
+ }
+}

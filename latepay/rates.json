@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "pack_id": "UK-2026-09",
+  "status": "verified 2026-09-19 against Bank of England database and legislation.gov.uk (research/latepay-data-2026-09-19.md)",
+  "verified_at": "2026-09-19",
+  "last_verified": "2026-09-19",
+  "research_note": "research/latepay-data-2026-09-19.md",
+  "jurisdiction": "England, Wales and Northern Ireland (SI 2002/1675 art. 1(2)); Scotland rate order NOT VERIFIED",
+  "currency": "GBP",
+  "statutory_margin_percent": 8.0,
+  "statutory_margin_source": "SI 2002/1675 art. 4",
+  "statutory_margin_source_url": "https://www.legislation.gov.uk/uksi/2002/1675/made",
+  "reference_date_rule": {
+    "text": "Bank Rate in force on 30 June (interest starting 1 Jul-31 Dec) or 31 December (interest starting 1 Jan-30 Jun) immediately before the day statutory interest starts to run",
+    "source": "SI 2002/1675 art. 4; Act 1998 s.4(2)",
+    "fixed_at_accrual_start_per_statute_text": true,
+    "sbc_calculator_resets_each_half_year": true,
+    "engine_mode_decision": "default reset each 1 Jan / 1 Jul (matches the Small Business Commissioner calculator); per-invoice toggle \"fixed at accrual start\" (statute text reading) - orchestrator 2026-09-19"
+  },
+  "accrual": {
+    "starts": "day after the relevant day",
+    "default_term_days_no_agreed_date": 30,
+    "public_authority_max_days": 30,
+    "business_cap_days": 60,
+    "business_cap_note": "60-day cap does not apply if the agreed longer term is not grossly unfair (s.4(2F))",
+    "source": "Late Payment of Commercial Debts (Interest) Act 1998 s.4(2), (2A), (2D), (2E), (2H)",
+    "source_url": "https://www.legislation.gov.uk/ukpga/1998/20/section/4"
+  },
+  "compensation": {
+    "bands": [
+      {
+        "min_debt_inclusive": 0,
+        "max_debt_exclusive": 1000,
+        "fixed_sum": 40
+      },
+      {
+        "min_debt_inclusive": 1000,
+        "max_debt_exclusive": 10000,
+        "fixed_sum": 70
+      },
+      {
+        "min_debt_inclusive": 10000,
+        "max_debt_exclusive": null,
+        "fixed_sum": 100
+      }
+    ],
+    "once_per_debt": true,
+    "reasonable_costs_top_up": "s.5A(2A)",
+    "source": "Act 1998 s.5A(2) (inserted by SI 2002/1674 reg. 2(4))",
+    "source_url": "https://www.legislation.gov.uk/ukpga/1998/20/section/5A"
+  },
+  "vat": {
+    "interest_base_includes_vat": true,
+    "interest_base_source": "Small Business Commissioner calculator: 'How much are you owed for this invoice? (include any VAT)'",
+    "interest_base_source_url": "https://www.smallbusinesscommissioner.gov.uk/interest-calculator/",
+    "interest_outside_scope_of_vat": true,
+    "interest_vat_source": "HMRC VATSC06810",
+    "interest_vat_source_url": "https://www.gov.uk/hmrc-internal-manuals/vat-supply-and-consideration/vatsc06810",
+    "engine_default": "interest base includes VAT by default; per-invoice toggle to exclude"
+  },
+  "day_count": {
+    "govuk_example_divisor": 365,
+    "govuk_example_rounds_daily_to_pence": true,
+    "govuk_source_url": "https://www.gov.uk/late-commercial-payments-interest-debt-recovery/charging-interest-commercial-debt",
+    "sbc_calculator_divisor": "366 if the current calendar year is leap, else 365 (observed in view-vanilla.js)",
+    "engine_default_decision": "divide by 365; daily figure rounded half-up to pence, then x days (gov.uk worked example) - orchestrator 2026-09-19",
+    "divisor": 365,
+    "round_daily_to_pence": true
+  },
+  "bank_rate_current": {
+    "rate_percent": 3.75,
+    "effective_from": "2025-12-18",
+    "latest_decision": "held",
+    "next_decision_due": "2026-11-05",
+    "source": "Bank of England, Interest rates and Bank Rate page",
+    "source_url": "https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate",
+    "last_verified": "2026-09-19"
+  },
+  "bank_rate_changes": [
+    {
+      "date": "2018-08-02",
+      "rate_percent": 0.75
+    },
+    {
+      "date": "2020-03-11",
+      "rate_percent": 0.25
+    },
+    {
+      "date": "2020-03-19",
+      "rate_percent": 0.1
+    },
+    {
+      "date": "2021-12-16",
+      "rate_percent": 0.25
+    },
+    {
+      "date": "2022-02-03",
+      "rate_percent": 0.5
+    },
+    {
+      "date": "2022-03-17",
+      "rate_percent": 0.75
+    },
+    {
+      "date": "2022-05-05",
+      "rate_percent": 1.0
+    },
+    {
+      "date": "2022-06-16",
+      "rate_percent": 1.25
+    },
+    {
+      "date": "2022-08-04",
+      "rate_percent": 1.75
+    },
+    {
+      "date": "2022-09-22",
+      "rate_percent": 2.25
+    },
+    {
+      "date": "2022-11-03",
+      "rate_percent": 3.0
+    },
+    {
+      "date": "2022-12-15",
+      "rate_percent": 3.5
+    },
+    {
+      "date": "2023-02-02",
+      "rate_percent": 4.0
+    },
+    {
+      "date": "2023-03-23",
+      "rate_percent": 4.25
+    },
+    {
+      "date": "2023-05-11",
+      "rate_percent": 4.5
+    },
+    {
+      "date": "2023-06-22",
+      "rate_percent": 5.0
+    },
+    {
+      "date": "2023-08-03",
+      "rate_percent": 5.25
+    },
+    {
+      "date": "2024-08-01",
+      "rate_percent": 5.0
+    },
+    {
+      "date": "2024-11-07",
+      "rate_percent": 4.75
+    },
+    {
+      "date": "2025-02-06",
+      "rate_percent": 4.5
+    },
+    {
+      "date": "2025-05-08",
+      "rate_percent": 4.25
+    },
+    {
+      "date": "2025-08-07",
+      "rate_percent": 4.0
+    },
+    {
+      "date": "2025-12-18",
+      "rate_percent": 3.75
+    }
+  ],
+  "bank_rate_changes_source": "Bank of England Database, Bank Rate history",
+  "bank_rate_changes_source_url": "https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp",
+  "reference_rates": [
+    {
+      "reference_date": "2019-12-31",
+      "period_from": "2020-01-01",
+      "period_to": "2020-06-30",
+      "bank_rate_percent": 0.75,
+      "statutory_rate_percent": 8.75
+    },
+    {
+      "reference_date": "2020-06-30",
+      "period_from": "2020-07-01",
+      "period_to": "2020-12-31",
+      "bank_rate_percent": 0.1,
+      "statutory_rate_percent": 8.1
+    },
+    {
+      "reference_date": "2020-12-31",
+      "period_from": "2021-01-01",
+      "period_to": "2021-06-30",
+      "bank_rate_percent": 0.1,
+      "statutory_rate_percent": 8.1
+    },
+    {
+      "reference_date": "2021-06-30",
+      "period_from": "2021-07-01",
+      "period_to": "2021-12-31",
+      "bank_rate_percent": 0.1,
+      "statutory_rate_percent": 8.1
+    },
+    {
+      "reference_date": "2021-12-31",
+      "period_from": "2022-01-01",
+      "period_to": "2022-06-30",
+      "bank_rate_percent": 0.25,
+      "statutory_rate_percent": 8.25
+    },
+    {
+      "reference_date": "2022-06-30",
+      "period_from": "2022-07-01",
+      "period_to": "2022-12-31",
+      "bank_rate_percent": 1.25,
+      "statutory_rate_percent": 9.25
+    },
+    {
+      "reference_date": "2022-12-31",
+      "period_from": "2023-01-01",
+      "period_to": "2023-06-30",
+      "bank_rate_percent": 3.5,
+      "statutory_rate_percent": 11.5
+    },
+    {
+      "reference_date": "2023-06-30",
+      "period_from": "2023-07-01",
+      "period_to": "2023-12-31",
+      "bank_rate_percent": 5.0,
+      "statutory_rate_percent": 13.0
+    },
+    {
+      "reference_date": "2023-12-31",
+      "period_from": "2024-01-01",
+      "period_to": "2024-06-30",
+      "bank_rate_percent": 5.25,
+      "statutory_rate_percent": 13.25
+    },
+    {
+      "reference_date": "2024-06-30",
+      "period_from": "2024-07-01",
+      "period_to": "2024-12-31",
+      "bank_rate_percent": 5.25,
+      "statutory_rate_percent": 13.25,
+      "note": "SBC calculator table shows 5.00 here; BoE cut to 5.00 took effect 2024-08-01, so 5.25 was in force on 30 Jun 2024"
+    },
+    {
+      "reference_date": "2024-12-31",
+      "period_from": "2025-01-01",
+      "period_to": "2025-06-30",
+      "bank_rate_percent": 4.75,
+      "statutory_rate_percent": 12.75
+    },
+    {
+      "reference_date": "2025-06-30",
+      "period_from": "2025-07-01",
+      "period_to": "2025-12-31",
+      "bank_rate_percent": 4.25,
+      "statutory_rate_percent": 12.25
+    },
+    {
+      "reference_date": "2025-12-31",
+      "period_from": "2026-01-01",
+      "period_to": "2026-06-30",
+      "bank_rate_percent": 3.75,
+      "statutory_rate_percent": 11.75
+    },
+    {
+      "reference_date": "2026-06-30",
+      "period_from": "2026-07-01",
+      "period_to": "2026-12-31",
+      "bank_rate_percent": 3.75,
+      "statutory_rate_percent": 11.75
+    }
+  ],
+  "next_reference_date": "2026-12-31"
+}
